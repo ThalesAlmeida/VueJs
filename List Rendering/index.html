@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List Rendering</title>
+</head>
+<body>
+    <div id="app">
+            <h1>Users List</h1>
+            <div class="card" v-for="user in users">
+                <div class="card-body"
+                :key="user.id">
+                    <p>id:{{user.id}}</p>
+                    <p>Name:{{user.name}}</p>
+                    <p>Profession:{{user.profession}}</p>
+                    
+                </div>
+
+
+            </div>
+            <hr>
+            <ul>
+                <li v-for="user in users">
+                    {{user}}
+                </li>
+            </ul>
+            <hr>
+            <p>Numbers from one to ten</p>
+            <p v-for="number in 50">{{number}}</p>
+            
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
